@@ -19,7 +19,9 @@
   "homepage": "https://github.com/sternmd/crud-express-mongodb#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.10"
   },
   "devDependencies": {
     "nodemon": "^1.17.5"

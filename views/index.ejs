@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title">
+                        Express MongoDB Setup
+                    </h1>
+                    <p class="subtitle">
+                        Welcome to the Chatroom
+                    </p>
+
+                    <form action="/quotes" method="POST">
+                        <div class="field">
+                            <label class="label">Username</label>
+                            <div class="control">
+                                <input class="input" type="text" placeholder="username" name="name" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Message" name="quote" required></textarea>
+                            </div>
+                        </div>
+
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="column">
+                    <article class="message is-info">
+                        <div class="message-header">
+                            <p>Chatroom</p>
+                        </div>
+                        <div class="message-body">
+                            <ul class="quotes">
+                                <% for(var i=0; i
+                                <quotes.length; i++) {%>
+                                    <li class="quote">
+                                        <span class="has-text-weight-bold has-text-info"><%= quotes[i].name %>:</span>
+                                        <span><%= quotes[i].quote %></span>
+                                    </li>
+                                    <% } %>
+                            </ul>
+                        </div>
+                    </article>
+                    <button id="update" class="button is-primary">Update Name</button>
+                    <button id="delete" class="button is-danger">Delete</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
